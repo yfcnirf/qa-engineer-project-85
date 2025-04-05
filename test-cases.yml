@@ -81,7 +81,7 @@
     нет данных
   steps:
     - Нажимаем кнопку "Create a game"
-    - Выбираем нужные значения
+    - Выбираем level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area
     - Нажимаем кнопку "Create a battle"
   expected-result: |
     Игра успешно создана
