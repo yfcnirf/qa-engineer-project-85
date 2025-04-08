@@ -132,7 +132,7 @@
     нет данных
   steps:
     - Нажимаем кнопку "Create a game"
-    - Выбираем необходимые параметры игры
+    - Выбираем необходимые параметры игры (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
     - Нажимаем кнопку "Create a battle"
     - Переводим страницу на русский язык с помощью яндекс переводчика
     - Нажимаем на кнопку с тремя точками над полем для ввода кода
@@ -147,7 +147,7 @@
     нет данных
   test-data: |
     Тестовые данные
-    нет данных
+    email = qwert@gmail.com Пароль = 121212
   steps:
     - Открываем сайт https://codebattle.hexlet.io/ на мобильном телефоне
     - Входим в аккаунт
@@ -162,13 +162,13 @@
     Код успешно вводится пользователем
   prerequisites: |
     Пользователь авторизован
-    Создана новая игра
+    Создана новая игра (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
     Открыта игра
   test-data: |
     Тестовые данные
-    нет данных
+    email = qwert@gmail.com Пароль = 121212
   steps:
-    - Пишем код в поле ввода
+    - Пишем код в поле ввода (const _ = require("lodash"); const R = require("rambda");)
   expected-result: |
     Код успешно вводится пользователем
 
@@ -177,15 +177,15 @@
   requirement: |
     Тест запускается
   prerequisites: |
-    Пользователь авторизован
-    Игра создана
+    Пользователь авторизован email = qwert@gmail.com Пароль = 121212
+    Игра создана (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
     Открыта игра
-    Написан код
+    Написан код (const _ = require("lodash"); const R = require("rambda");)
   test-data: |
     Тестовые данные
     нет данных
   steps:
-    - Нажимаем кнопку "Run" над окном ввода
+    - Нажимаем кнопку "Run" над полем ввода кода
   expected-result: |
     Тест запущен
 
@@ -195,7 +195,7 @@
   requirement: |
     Есть возможность пересмотреть запись игры
   prerequisites: |
-    Пользователь авторизован
+    Пользователь авторизован email = qwert@gmail.com Пароль = 121212
     Открыта страница https://codebattle.hexlet.io/#lobby
   test-data: |
     Тестовые данные
@@ -204,7 +204,7 @@
     - Открыта вкладка "lobby"
     - Выбираем любой пройденный батл из списка 
     - Нажимаем кнопку "Show" под полем "Actions"
-    - Проверяем коррекность отображения боя
+    - Проверяем коррекность отображения записи боя
   expected-result: |
     Игру можно заново просмотреть
 
@@ -214,7 +214,7 @@
   requirement: |
     Игроки отображаются в рейтинге в соответствии с результатами игр
   prerequisites: |
-    Пользователь авторизован
+    Пользователь авторизован email = qwert@gmail.com Пароль = 121212
     Открыта страница https://codebattle.hexlet.io/#lobby
   test-data: |
     Тестовые данные
@@ -225,3 +225,169 @@
     - Обратить внимание на последовательность игроков в рейтинге
   expected-result: |
     Игроки в рейтинге отображаются в правильной последовательности
+
+
+- summary: |
+    Возможность авторизации через аккаунт GitHab
+  requirement: |
+    Пользователь может авторизоваться через аккаунт GitHab
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/
+    Пользователь авторизован в GitHab
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на кнопку "Sing in" в правом верхнем углу 
+    - Нажать кнопку "Sing in with githab"
+  expected-result: |
+    Пользователь успешно авторизован через аккаунт GitHab
+
+- summary: |
+    Возможность авторизации через аккаунт GitHab
+  requirement: |
+    Пользователь может авторизоваться через аккаунт GitHab
+  prerequisites: |
+    Открыта страница https://codebattle.hexlet.io/
+    Пользователь авторизован в GitHab
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на кнопку "Sing in" в правом верхнем углу 
+    - Нажать кнопку "Sing in with githab"
+  expected-result: |
+    Пользователь успешно авторизован через аккаунт GitHab
+
+
+- summary: |
+    Возможность создать игру с другим пользователем
+  requirement: |
+    Есть возможность выбрать соперника
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на кнопку "Create a game" в правом верхнем углу 
+    - Выбрать в параметре "Game type" окно "With a friend"
+    - Выбрать дополнительные параметры (level 1, time control - 8min, Choose task by name or tags - rect area)
+  expected-result: |
+    Игра с другим пользователем успешно создана
+
+- summary: |
+    Возможность создать игру с другим пользователем
+  requirement: |
+    Есть возможность выбрать соперника
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на кнопку "Create a game" в правом верхнем углу 
+    - Выбрать в параметре "Game type" окно "With a friend"
+    - Выбрать дополнительные параметры (level 1, time control - 8min, Choose task by name or tags - rect area)
+  expected-result: |
+    Игра с другим пользователем успешно создана
+    
+- summary: |
+    Возможность посмотреть информацию о клане
+  requirement: |
+    Есть возможность узнать информацию об участниках клана
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на свой никнейм в правом верхнем углу 
+    - В выпадающем окне настроек выбрать "Clans"
+    - Нажать на любой строке кнопку "Show"
+    - Посмотреть информацию об участниках
+  expected-result: |
+    Есть возможность узнать информацию об участниках клана
+
+
+- summary: |
+    Возможность выбора языка программирования во время игры
+  requirement: |
+    Есть возможность сменить язык программирования во время игры
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Игра создана (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
+    Игра открыта
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать над полем ввода кода на выпадающий список с языками программирования
+    - Выбрать "Node.js"
+    - Ввести в поле вода код (const _ = require("lodash"); const R = require("rambda");)
+    - Нажать над полем ввода кода на выпадающий список с языками программирования
+    - Выбрать язык "Java"
+  expected-result: |
+    Есть возможность сменить язык программирования во время игры
+
+- summary: |
+    Проверить наличие защиты от читерства
+  requirement: |
+    Невозможно скопировать код соперника во время игры
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Игра создана (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
+    Игра открыта
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Выделить текст кода соперника
+    - Нажать правой кнопкой мыши на выделенный текст
+    - Найти опцию "Копировать"
+  expected-result: |
+    Невозможно скопировать код соперника во время игры
+
+
+- summary: |
+    Проверить работу чата
+  requirement: |
+    Есть возможность взаимодействовать с чатом
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Найти внизу страницы окно чата
+    - Просмотреть записи в чате
+    - Ввести в поле ввода текст "Привет чат"
+    - Нажать кнопку "Send"
+  expected-result: |
+    Есть возможность взаимодействовать с чатом
+
+- summary: |
+    Есть возможность создать турнир
+  requirement: |
+    Пользователь может создать новый турнир
+  prerequisites: |
+    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
+    Открыта страница https://codebattle.hexlet.io/#lobby
+  test-data: |
+    Тестовые данные
+    нет данных
+  steps:
+    - Нажать на свой никнейм в правом верхнем углу 
+    - В выпадающем поле выбрать "Tournaments"
+    - Найти внизу форму для заполнения "Create a new tournament"
+    - Ввести в поле ввода "Name" - "Power"
+    - Выбрать в выпадающем списке "Type" - "team"
+    - Ввести в поле ввода "Description" текст "Markdown description. [stream_link](https://codebattle.hexlet.io)"
+    - Остальные поля оставить с имеющимися данными
+    - Нажать кнопку "Create'
+  expected-result: |
+    Пользователь может создать новый турнир
