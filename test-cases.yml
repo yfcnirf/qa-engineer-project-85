@@ -243,39 +243,6 @@
   expected-result: |
     Пользователь успешно авторизован через аккаунт GitHab
 
-- summary: |
-    Возможность авторизации через аккаунт GitHab
-  requirement: |
-    Пользователь может авторизоваться через аккаунт GitHab
-  prerequisites: |
-    Открыта страница https://codebattle.hexlet.io/
-    Пользователь авторизован в GitHab
-  test-data: |
-    Тестовые данные
-    нет данных
-  steps:
-    - Нажать на кнопку "Sing in" в правом верхнем углу 
-    - Нажать кнопку "Sing in with githab"
-  expected-result: |
-    Пользователь успешно авторизован через аккаунт GitHab
-
-
-- summary: |
-    Возможность создать игру с другим пользователем
-  requirement: |
-    Есть возможность выбрать соперника
-  prerequisites: |
-    Пользователь авторизован email = qwert@gmail.com Пароль = 12121
-    Открыта страница https://codebattle.hexlet.io/#lobby
-  test-data: |
-    Тестовые данные
-    нет данных
-  steps:
-    - Нажать на кнопку "Create a game" в правом верхнем углу 
-    - Выбрать в параметре "Game type" окно "With a friend"
-    - Выбрать дополнительные параметры (level 1, time control - 8min, Choose task by name or tags - rect area)
-  expected-result: |
-    Игра с другим пользователем успешно создана
 
 - summary: |
     Возможность создать игру с другим пользователем
