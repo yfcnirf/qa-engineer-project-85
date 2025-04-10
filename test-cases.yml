@@ -198,7 +198,7 @@
 - summary: |
     Возможность запуска проверки кода решения задачи
   requirement: |
-    Проверка кода решения задачи успешно запускается
+    Проверка кода решения задачи происходит
   prerequisites: |
     Пользователь авторизован email = qwert@gmail.com Пароль = 121212
     Игра создана (level 1, game type - winh a bot, time control - 8min, Choose task by name or tags - rect area)
@@ -210,7 +210,7 @@
   steps:
     - Нажимаем кнопку "Run" над полем ввода кода
   expected-result: |
-    Тест запущен
+    Проверка происходит
 
 
 - summary: |
